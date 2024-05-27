@@ -2,10 +2,10 @@ name: laravelworkflow
 
 on:
   push:
-    - main
+    - master
   pull_request:
    branches:
-      - main
+      - master
 # event is something that triggers workflow like on push or pull request trigger this workflow
 jobs:      #job is set of steps that run on same runner and independend of each other
   build:
