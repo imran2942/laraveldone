@@ -4,14 +4,15 @@ on:
   push:
     - main
   pull_request:
-    - main
-
-jobs:
+   branches:
+      - main
+# event is something that triggers workflow like on push or pull request trigger this workflow
+jobs:      #job is set of steps that run on same runner and independend of each other
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # runner is the virtual machine that run the predefined image
     container: python:3.9-slim
 
-  steps:
+  steps:  #individual tasks within a job.
     - name: checkout code
       uses: actions@checkoutv2
 
