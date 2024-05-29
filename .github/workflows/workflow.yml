@@ -1,6 +1,8 @@
 name: laravelworkflow
 
 on:
+  commit:
+    - main
   push:
     - main
   pull_request:
