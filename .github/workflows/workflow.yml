@@ -27,10 +27,9 @@
 #---
 name: laravelworkflow
 on:
-  commit:
-    - main
   push:
-    - main
+    branches:
+      - main
   pull_request:
     branches:
       - main
