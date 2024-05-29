@@ -1,22 +1,45 @@
+#name: laravelworkflow
+#
+#on:
+#  commit:
+#    - main
+#  push:
+#    - main
+#  pull_request:
+#   branches:
+#      - main
+## event is something that triggers workflow like on push or pull request trigger this workflow
+#jobs:      #job is set of steps that run on same runner and independend of each other
+#  build:
+#    runs-on: ubuntu-latest # runner is the virtual machine that run the predefined image
+#    container: python:3.9-slim
+#
+# steps:  #individual tasks within a job.
+#    - name: checkout code
+#      uses: actions@checkoutv2
+#
+#    - name: run any script
+#      run: echo hello,world
+#
+#
+#
+#
+#---
 name: laravelworkflow
-
 on:
   commit:
     - main
   push:
     - main
   pull_request:
-   branches:
+    branches:
       - main
-# event is something that triggers workflow like on push or pull request trigger this workflow
-jobs:      #job is set of steps that run on same runner and independend of each other
+jobs:
   build:
-    runs-on: ubuntu-latest # runner is the virtual machine that run the predefined image
+    runs-on: ubuntu-latest
     container: python:3.9-slim
-
-  steps:  #individual tasks within a job.
+  steps:
     - name: checkout code
       uses: actions@checkoutv2
-
     - name: run any script
       run: echo hello,world
